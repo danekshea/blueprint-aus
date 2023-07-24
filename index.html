@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blueprint Sydney</title>
     <style>
       body {
@@ -9,18 +10,22 @@
       .flex-container {
         display: flex;
         flex-wrap: wrap;
-        width: 40%;
+        width: 100%;
         margin: auto;
       }
-      .flex-container > * {
-        width: 100%;
-      }
       .flex-column {
-        flex: 0 0 33%;
+        flex: 0 0 100%;
         font-family: "Courier New", Courier, monospace;
         font-size: 20px;
         color: white;
-        min-width: 375px;
+      }
+      @media screen and (min-width: 1500px) {
+        .flex-container {
+            width: 50%;
+        }
+        .column-span {
+            width: 50%;
+        }
       }
       .flex-column a {
         color: white;
@@ -32,27 +37,20 @@
       .column-span a {
         color: rgb(51, 121, 197);
       }
-      @media (min-width: 992px) {
-        .flex-container > * {
-          width: calc(100% / 3);
-        }
-      }
       .column-title {
         font-weight: bold;
         font-size: 1.2em;
         color: rgb(51, 121, 197);
       }
       .typing {
-        color: rgb(51, 121, 197); /* The Matrix-style green */
+        color: rgb(51, 121, 197);
         font-family: "Courier New", Courier, monospace;
-        font-size: 60px; /* Change to your desired size */
+        font-size: 25px;
         font-weight: 500;
-        white-space: pre-wrap; /* This will allow the text to wrap and form new lines */
+        white-space: pre-wrap;
         border-radius: 15px;
         padding: 5px 5px 5px 5px;
         line-height: 1;
-        align-items: center;
-        justify-content: center;
         display: flex;
       }
       @keyframes blink {
@@ -61,22 +59,12 @@
         }
       }
       .cursor {
-        border-right: 40px solid rgba(51, 121, 197, 0.7);
+        border-right: 20px solid rgba(51, 121, 197, 0.7);
         border-radius: 5px;
         width: 0;
         height: 1em;
         margin-left: 2px;
         animation: blink 1s step-end infinite;
-      }
-      @media (max-width: 600px) {
-        .flex-container {
-          width: 100%;
-        }
-      }
-      @media (max-width: 900px) {
-        .flex-container {
-          width: 100%;
-        }
       }
     </style>
   </head>
@@ -121,9 +109,8 @@
       <div class="typing column-span"><span /></div>
       <div class="column-span">
         Are you inspired by Bryan Johnson's <a href="https://blueprint.bryanjohnson.co/" target="_blank">Blueprint</a> but live in Sydney, Australia?
-        Me too! Here is a list of links to products I have found that are the same/similar to the ones he uses but are available in Australia.<br /><br />
-        Disclaimer: Some of these are referral links. This page is open-source and additions/suggestions are welcome:
-        <a href="https://github.com/danekshea/blueprint-aus">https://github.com/danekshea/blueprint-aus</a>
+        Me too! Here are products that are the same/similar to the ones he uses but available in Australia.<br /><br />
+        Disclaimer: Some of these are referral links.
       </div>
       <div class="flex-column">
         <div class="column-title">🍎 Green Giant</div>
