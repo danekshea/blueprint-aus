@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blueprint Sydney</title>
     <style>
       body {
@@ -19,12 +19,31 @@
         font-size: 20px;
         color: white;
       }
-      @media screen and (min-width: 1500px) {
-        .flex-container {
-            width: 50%;
+      @media screen and (min-width: 450px) {
+        .typing {
+          font-size: 45px;
         }
-        .column-span {
-            width: 50%;
+      }
+      @media screen and (min-width: 900px) {
+        .flex-column {
+          flex: 0 0 50%;
+        }
+        .flex-container {
+          width: 900px;
+        }
+        .typing {
+          font-size: 55px;
+        }
+      }
+      @media screen and (min-width: 1500px) {
+        .flex-column {
+          flex: 0 0 30%;
+        }
+        .flex-container {
+          width: 1500px;
+        }
+        .typing {
+          font-size: 65px;
         }
       }
       .flex-column a {
@@ -33,6 +52,8 @@
       .column-span {
         flex: 0 0 100%;
         color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 20px;
       }
       .column-span a {
         color: rgb(51, 121, 197);
@@ -41,6 +62,22 @@
         font-weight: bold;
         font-size: 1.2em;
         color: rgb(51, 121, 197);
+      }
+      .intro {
+        text-align: center;
+      }
+      .disclaimer {
+        color:red;
+      }
+      .sources a {
+        color: white;
+      }
+      ul li {
+        color: rgb(51, 121, 197); /* Color of bullet points */
+      }
+
+      ul li span {
+        color: rgb(255, 255, 255); /* Color of text */
       }
       .typing {
         color: rgb(51, 121, 197);
@@ -51,7 +88,7 @@
         border-radius: 15px;
         padding: 5px 5px 5px 5px;
         line-height: 1;
-        display: flex;
+        text-align: center;
       }
       @keyframes blink {
         50% {
@@ -107,15 +144,18 @@
   <body>
     <div class="flex-container">
       <div class="typing column-span"><span /></div>
-      <div class="column-span">
+      <div class="column-span intro">
         Are you inspired by Bryan Johnson's <a href="https://blueprint.bryanjohnson.co/" target="_blank">Blueprint</a> but live in Sydney, Australia?
         Me too! Here are the same/similar products but available in Australia.<br /><br />
-        Disclaimer: Some of these are referral links.
+        
+        <span class="disclaimer">Disclaimer: Some of these are referral links.</span>
       </div>
       <div class="flex-column">
         <div class="column-title">🍎 Green Giant</div>
         <ul>
-          <li><a target="_blank" href="https://amzn.to/3rFuRsf">Spermidine</a></li>
+          <li>
+            <a target="_blank" href="https://amzn.to/3rFuRsf"><span>Spermidine</span></a>
+          </li>
           <li><a target="_blank" href="https://amzn.to/46VHAal">Amino Acid Complex</a></li>
           <li><a target="_blank" href="https://amzn.to/3Dl9oHN">Creatine</a></li>
           <li><a target="_blank" href="https://amzn.to/3rJZTis">Collagen Peptides</a></li>
@@ -136,7 +176,7 @@
           <li><a target="_blank" href="">Cumin, 1 Tbsp</a></li>
           <li><a target="_blank" href="https://amzn.to/46XiqrZ">Apple Cider Vinegar, 1 Tbsp</a></li>
           <li><a target="_blank" href="https://amzn.to/46ZO7kk">Hemp Seeds, 1 Tbsp</a></li>
-          <li><a target="_blank" href="">After prep, drizzle 1 Tbsp of Extra Virgin Olive Oil</a></li>
+          <li><a target="_blank" href="">1 Tbsp of Extra Virgin Olive Oil</a></li>
         </ul>
       </div>
       <div class="flex-column">
@@ -160,7 +200,7 @@
         </ul>
       </div>
       <div class="flex-column">
-        <div class="column-title">💊 Upon waking</div>
+        <div class="column-title">💊 Upon Waking</div>
         <ul>
           <li><a target="_blank" href="">Acarbose 200mg (Rx)</a></li>
           <li><a target="_blank" href="https://amzn.to/3O0ECc6">Ashwagandha 600mg</a></li>
@@ -232,7 +272,6 @@
           <li><a target="_blank" href="">B12 methylcobalamin 1x/wk</a></li>
           <li><a target="_blank" href="">Aspirin 81mg 3x wk</a></li>
           <li><a target="_blank" href="">112mcg Levothyroxine, 60mg Armour Thyroid (diagnosed with hypothyroidism at age 21)</a></li>
-          <li>Note: an EVOO available for purchase in Aug. Working on dark chocolate.</li>
         </ul>
       </div>
       <div class="flex-column">
@@ -250,7 +289,7 @@
         </ul>
       </div>
       <div class="flex-column">
-        <div class="column-title">🌙 Night time routine</div>
+        <div class="column-title">🌙 Night Time Routine</div>
         <ul>
           <li><a target="_blank" href="https://nurosym.com/">Nurosym</a></li>
           <li><a target="_blank" href="https://pulsetto.tech/">Pulsetto</a></li>
@@ -271,7 +310,7 @@
           <li><a target="_blank" href="https://amzn.to/3Q6V5hk">Bedroom Blackout Film</a></li>
         </ul>
       </div>
-      <div class="column-span">
+      <div class="column-span sources">
         <div class="column-title">📃 Sources</div>
         <ul>
           <li><a target="_blank" href="https://youtu.be/Z7veiyN4LqU">Top 1% Sleep Ranking - My Evening Routine</a></li>
