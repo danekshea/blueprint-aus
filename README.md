@@ -1,6 +1,6 @@
 # Blueprint Australia
 
-This project, inspired by Bryan Johnson's [Blueprint](https://blueprint.bryanjohnson.co/), provides a list of the same/similar products but available in Sydney, Australia.
+Hosted at [blueprint.sydney](blueprint.sydney), this project, inspired by Bryan Johnson's [Blueprint](https://blueprint.bryanjohnson.co/), provides a list of the same/similar products but available in Sydney, Australia.
 
 ## Getting Started
 
